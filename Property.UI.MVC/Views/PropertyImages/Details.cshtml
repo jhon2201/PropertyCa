@@ -1,0 +1,36 @@
+﻿@model Property.Domain.Models.PropertyImage
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PropertyImage</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.file)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.file)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.enabled)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.enabled)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.idProperty)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.idProperty)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.idPropertyImage">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
